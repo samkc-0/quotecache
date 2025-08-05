@@ -1,8 +1,8 @@
 # quotecache
 
-## example usage:
+## example usage
 
-daily Victor Hugo quote on bash login
+Daily Victor Hugo quote on bash login:
 
 ```
 pip install wikiquote
@@ -11,9 +11,10 @@ chmod +x main.py
 cp .quotecache ~/.quotecache
 ```
 
-then, in your `.bashrc`:
+then, add this line to your `.bashrc`:
 
 echo \`awk 'BEGIN {srand()} {lines[NR]=$0} END {print lines[int(rand()*NR)+1]}' .quotecache\` "(Victor Hugo)"
+
 
 
 
