@@ -30,6 +30,11 @@ def main():
         results = wikiquote.quotes(args.search, lang=args.lang)
     except wikiquote.utils.NoSuchPageException:
         print("No results found for serach string: ", args.search)
+        print("Exiting.")
+        return
+    except wikiquote.utils.DisambiguationPageException:
+        print("Multiple results found for serach string: ", args.search)
+        print("Handling of disambiguation pages is not yet implemented. Exiting.")
         return
     if len(results) == 0:
         print("No results found for serach string: ", args.search)
