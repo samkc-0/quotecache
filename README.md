@@ -11,5 +11,6 @@ cp .quotecache ~/.quotecache
 
 then, in your `.bashrc`:
 
-echo `awk 'BEGIN {srand()} {lines[NR]=$0} END {print lines[int(rand()*NR)+1]}' .quotecache` " (Victor Hugo)
+echo `awk 'BEGIN {srand()} {lines[NR]=$0} END {print lines[int(rand()*NR)+1]}' .quotecache` "(Victor Hugo)"
+
 
